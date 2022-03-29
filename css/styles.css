@@ -88,18 +88,8 @@ img{
     color: var(--blaco);
     height: 100vh;
     padding: 1rem 0;
-}
-
-@media (min-width: 375px) {
-    .header{
-        padding: calc(var(--separacion) * 2) 0;
-    }
-}
-
-@media (min-width: 800px) {
-    .header{
-        padding: calc(var(--separacion) * 5) 0;
-    }
+    display: flex;
+    align-items: center;
 }
 
 .contenido-header{
@@ -108,44 +98,107 @@ img{
 
 .texto-header{
     text-align: center;
-    padding-top: var(--separacion);
+    padding-top: 1rem;
 }
 
 .texto-header p{
     margin: 0;
 }
 
-.eslogan-producto{
-    font-size: 3rem;
+.texto-header .eslogan-producto{
+    font-size: 4rem;
     font-weight: 900;
 }
-
-.nombreProducto{
+.texto-header .nombreProducto,
+.texto-header .precio-producto span{
     font-size: 6rem;
+    font-weight: 900;
     margin: 0;
+}
+.texto-header .descripcion-producto{
+    font-size: 1.4rem;
 }
 
 
-@media (min-width: 800px) {
-    .contenido-header{
+@media (min-height: 360px) and (min-width: 640px) {
+    .header{
+        padding: calc(var(--separacion) * 2) 0;
+    }
+    .contenido-header {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .imagen-header {
+        flex: 1;
+    }
+    .texto-header{
+        flex: 1;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .header {
+        padding: calc(var(--separacion) * 5) 0;
+        height: 70vh;
+    }
+
+    .contenido-header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .texto-header{
+
+    .texto-header {
         text-align: left;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 0;
     }
-    .nombreProducto{
+
+    .texto-header .eslogan-producto {
+        font-size: 3rem;
+    }
+
+    .texto-header .nombreProducto {
         font-size: 10rem;
         line-height: 1;
+        margin: 3rem 0;
+    }
+
+    .texto-header .precio-producto span{
+        font-size: 6rem;
     }
 }
 
-.precio-producto span{
-    font-size: 6rem;
-    font-weight: bold;
+
+/* Iconos */
+.iconos{
+    margin: 5rem 0;
+}
+.icono{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    text-align: center;
 }
 
+.icono h3{
+    margin: 1rem;
+}
+.icono p{
+    margin: 1rem;
+}
+
+.icono img{
+    max-width: 6rem;
+}
+
+@media (min-width: 768px){
+    .iconos{
+        display: flex;
+        gap: 2rem;
+    }
+}
