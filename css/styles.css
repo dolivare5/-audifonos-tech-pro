@@ -1,0 +1,151 @@
+:root{
+
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Lato', sans-serif;
+
+    /* Paleta de colores */
+    --primario: #1073ba;
+    --secundario: #00da55;
+    --gris: #3b3b3b;
+    --negro: #1f1f1f;
+    --gris-claro: #e1r1e1;
+    --blaco: #ffff;
+    /* ------------------ */
+
+    --separacion: 5rem;
+
+}
+
+/* Snippets CSS para darle formato al código*/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: var(--fuentePrincipal);
+}
+
+/* Estilos Globales */
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    font-family: var(--fuenteSecundaria);
+    margin: calc(var(separacion) / 2) 0;
+}
+
+h1{
+    font-size: 4.4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+/* Utilidades */
+.text-center{
+    text-align: center;
+}
+
+/* Degradados */
+.degradado-verde{
+    color: transparent;
+    background-image: linear-gradient(to right, var(--primario) 0% , var(--secundario) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Header */
+.header{
+    background-color: var(--negro);
+    color: var(--blaco);
+    height: 100vh;
+    padding: 1rem 0;
+}
+
+@media (min-width: 375px) {
+    .header{
+        padding: calc(var(--separacion) * 2) 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .header{
+        padding: calc(var(--separacion) * 5) 0;
+    }
+}
+
+.contenido-header{
+    align-items: center;
+}
+
+.texto-header{
+    text-align: center;
+    padding-top: var(--separacion);
+}
+
+.texto-header p{
+    margin: 0;
+}
+
+.eslogan-producto{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.nombreProducto{
+    font-size: 6rem;
+    margin: 0;
+}
+
+
+@media (min-width: 800px) {
+    .contenido-header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .texto-header{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .nombreProducto{
+        font-size: 10rem;
+        line-height: 1;
+    }
+}
+
+.precio-producto span{
+    font-size: 6rem;
+    font-weight: bold;
+}
+
