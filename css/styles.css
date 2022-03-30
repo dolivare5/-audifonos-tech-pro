@@ -211,6 +211,17 @@ img{
 }
 
 .notavif.notwebp .sobre-tech{
+<<<<<<< HEAD
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
+}
+
+.avif .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.avif");
+}
+
+.webp .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.webp");
+=======
     background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
 }
 
@@ -220,6 +231,7 @@ img{
 
 .webp .sobre-tech{
     background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.webp");
+>>>>>>> origin/main
 }
 
 .sobre-tech-grid{
@@ -486,13 +498,26 @@ img{
     cursor: pointer;
 }
 
+.texto-newsletter h2{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.formulario{
+    margin-bottom: 3rem;
+}
+
 /* Footer */
+
+.footer{
+    padding: 3rem 0 1rem 0;
+}
 .footer p{
     text-align: center;
     font-family: var(--fuenteSecundaria);
     text-transform: uppercase;
     font-size: 2.5rem;
     color: var(--primario);
-    padding: 3rem 0;
     font-weight: 900;
+    maargin: 0;
 }
