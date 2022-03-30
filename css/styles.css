@@ -206,10 +206,22 @@ img{
 /* Sobre TECH PRO */
 
 .sobre-tech{
-    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
     background-position: right;
     background-repeat: repeat, no-repeat;
 }
+
+.notavif.notwebp .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
+}
+
+.avif .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.avif");
+}
+
+.webp .sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.webp");
+}
+
 .sobre-tech-grid{
     display: grid;
     grid-template-rows: repeat(2, 40rem);
@@ -238,9 +250,22 @@ img{
 
 @media (min-width: 820px){
     .sobre-tech{
-        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
         background-size: 100%;
     }
+
+
+    .notavif.notwebp .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.jpg");
+    }
+
+    .avif .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.avif");
+    }
+
+    .webp .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0% ), url("../img/imagen-mujer.webp");
+    }
+
 
     .sobre-tech-grid{
         grid-template-rows: unset;
@@ -253,10 +278,7 @@ img{
     }
 
     .texto-sobre-tech{
-        padding-bottom: 0rem;
-
-        margin-right: 20rem;
-        margin-left: -20rem;
+        padding-bottom: 0rem;;
 
     }
 
@@ -266,7 +288,12 @@ img{
         line-height: 2;
     }
 }
-
+@media (min-width: 1600px){
+    .texto-sobre-tech{
+        margin-right: 20rem;
+        margin-left: -20rem
+    }
+}
 
 /* Modelos de los TechPRO */
 .modelos{
@@ -367,10 +394,21 @@ img{
 
 /* NewsLetter */
 .newsletter{
-    background-image: linear-gradient(to bottom, transparent 50%, var(--blaco) 0%), url("../img/newsletter.jpg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100%, 60rem;
+}
+
+.notavif.notwebp .newsletter{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blaco) 0%), url("../img/newsletter.jpg");
+}
+
+.avif .newsletter{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blaco) 0%), url("../img/newsletter.avif");
+}
+
+.webp .newsletter{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--blaco) 0%), url("../img/newsletter.webp");
 }
 
 .contenido-newsletter{
@@ -387,8 +425,19 @@ img{
 @media (min-width: 768px){
 
 
+    .notavif.notwebp .newsletter{
+        background-image: linear-gradient(to right, transparent 50%, var(--blaco) 0%),  url("../img/newsletter.jpg");
+    }
+
+    .avif .newsletter{
+        background-image: linear-gradient(to right, transparent 50%, var(--blaco) 0%),  url("../img/newsletter.avif");
+    }
+
+    .webp .newsletter{
+        background-image: linear-gradient(to right, transparent 50%, var(--blaco) 0%),  url("../img/newsletter.webp");
+    }
+
     .newsletter{
-        background-image: linear-gradient(to right, transparent 50%, var(--blaco) 0%), url("../img/newsletter.jpg");
         background-position: center, -10rem -2rem;
         padding: 10rem 0;
         background-size: 100%, 100rem;
@@ -403,6 +452,7 @@ img{
         grid-row: unset;
         grid-column: 2 / 3;
     }
+
 }
 
 @media (min-width: 2200px){
@@ -410,11 +460,6 @@ img{
         background-size: 100%, 180rem;
         background-position: center, 0% -30rem;
     }
-}
-
-
-.formulario{
-
 }
 
 .formulario input[type="text"]{
@@ -441,13 +486,26 @@ img{
     cursor: pointer;
 }
 
+.texto-newsletter h2{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.formulario{
+    margin-bottom: 3rem;
+}
+
 /* Footer */
+
+.footer{
+    padding: 3rem 0 1rem 0;
+}
 .footer p{
     text-align: center;
     font-family: var(--fuenteSecundaria);
     text-transform: uppercase;
     font-size: 2.5rem;
     color: var(--primario);
-    padding: 3rem 0;
     font-weight: 900;
+    maargin: 0;
 }
